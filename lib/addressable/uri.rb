@@ -944,6 +944,15 @@ module Addressable
     end
 
     ##
+    # The host component for this URI. No subdomain
+    #
+    # @return [String] The host component.
+    def host_no_subdomain
+      @host.split('.')[-2..-1].join('.')
+    end
+
+
+    ##
     # The host component for this URI, normalized.
     #
     # @return [String] The host component, normalized.
